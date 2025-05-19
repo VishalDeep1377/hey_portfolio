@@ -133,6 +133,82 @@
   color: #222;
 }
 
+/* Dark Mode Styles */
+body {
+  --background-color: #fff;
+  --text-color: #333;
+  --heading-color: #111;
+  --secondary-color: #666;
+  --card-background: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+body.dark-mode {
+  --background-color: #1a1a2e;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --secondary-color: #b0b0b0;
+  --card-background: #2a2a4a;
+  --border-color: #444466;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode .navbar {
+    background: #2a2a4a !important;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: var(--heading-color);
+}
+
+body.dark-mode .ftco-section, body.dark-mode .ftco-counter {
+    background: var(--background-color);
+}
+
+body.dark-mode .resume-wrap, body.dark-mode .blog-entry, body.dark-mode .box {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .blog-entry .text, body.dark-mode .resume-wrap .mt-4, body.dark-mode .box p {
+    color: var(--text-color);
+}
+
+body.dark-mode .skill-category {
+    color: #ffbd39;
+}
+
+body.dark-mode a {
+    color: #ffbd39; /* Adjust link color for dark mode */
+}
+
+body.dark-mode a:hover {
+    color: #ffffff; /* Adjust link hover color */
+}
+
+/* Ensure sections have padding in dark mode */
+body.dark-mode .ftco-section {
+    padding: 8em 0;
+}
+
+/* Example of a custom focus style */
+:focus {
+  outline: 2px solid #ffbd39; /* Use your theme's accent color */
+  outline-offset: 2px; /* Add some space around the element */
+}
+
+/* You might need more specific selectors if overriding existing styles */
+a:focus, button:focus, input:focus, textarea:focus {
+   outline: 2px solid #ffbd39;
+   outline-offset: 2px;
+}
+
 </style>
 
 
@@ -155,6 +231,9 @@
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
+          <div class="ml-auto d-flex align-items-center">
+            <button id="theme-toggle" class="btn btn-light btn-sm">Toggle Theme</button>
+          </div>
 	      </div>
 	    </div>
 	  </nav>
@@ -186,8 +265,8 @@
 
 
     <section class="ftco-section ftco-about" id="about-section">
-      <div class="container">
-        <div class="row">
+    	<div class="container">
+			<div class="row">
           <div class="col-md-12">
             <h2 class="mb-4">About Me</h2>
             <p><span style="font-size:1.2em;font-weight:600;color:#ffbd39;">Data Science | Full Stack Developer | AI & IoT Specialist</span></p>
@@ -209,7 +288,7 @@
               <span class="skill-badge">Next JS</span>
               <span class="skill-badge">API uses</span>
               <span class="skill-badge">PHP</span>
-            </div>
+									  </div>
             <div>
               <div class="skill-category">Frameworks:</div>
               <span class="skill-badge">Bootstrap</span>
@@ -221,7 +300,7 @@
               <span class="skill-badge">Scikit-learn</span>
               <span class="skill-badge">Pandas</span>
               <span class="skill-badge">NumPy</span>
-            </div>
+									</div>
             <div>
               <div class="skill-category">Tools/Platforms:</div>
               <span class="skill-badge">MySQL</span>
@@ -236,7 +315,7 @@
               <span class="skill-badge">Excel</span>
               <span class="skill-badge">Git & GitHub</span>
               <span class="skill-badge">Xampp Server</span>
-            </div>
+									  </div>
             <div>
               <div class="skill-category">Soft Skills:</div>
               <span class="skill-badge">Problem-Solving Skills</span>
@@ -244,7 +323,7 @@
               <span class="skill-badge">Project Management</span>
               <span class="skill-badge">Adaptability</span>
               <span class="skill-badge">Time management</span>
-            </div>
+									</div>
             <h3>Internships</h3>
             <ul>
               <li>Report maker on Excel (Internshala) - June 2023 – July 2023</li>
@@ -274,10 +353,10 @@
               <li>Lovely Professional University, Punjab, India - Bachelor of Technology - Computer Science and Engineering; CGPA: 8 CGPA (Since August 2023)</li>
               <li>Kendriya Vidyalaya NTPC Shaktinagar, Shaktinagar, Uttar Pradesh - Matriculation; Percentage: 86.2% (April 2019 - March 2020)</li>
               <li>Kendriya Vidyalaya no.1 Dhanbad, Binod Nagar, Dhanbad - Intermediate; Percentage: 81% (April 2021 - March 2022)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+								</ul>
+				</div>
+			</div>
+		</div>
     </section>
 
 
@@ -383,7 +462,7 @@
     					<span class="position">Kendriya Vidyalaya NTPC Shaktinagar, Shaktinagar, Uttar Pradesh</span>
     					<p class="mt-4">Percentage: 86.2%</p>
     				</div>
-    			</div>
+				</div>
     		</div>
 
     		<div class="row justify-content-center mt-5">
@@ -411,7 +490,7 @@
               <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">PHP Employee Management System</a></h3>
+                <h3 class="heading"><a href="php-employee-management.html">PHP Employee Management System</a></h3>
                 <p>Developed a dynamic web-based employee management system with PHP and MySQL.</p>
               </div>
             </div>
@@ -421,7 +500,7 @@
               <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">Final Year Project: Code to Career</a></h3>
+                <h3 class="heading"><a href="code-to-career.html">Final Year Project: Code to Career</a></h3>
                 <p>Developed a full-stack web application to bridge the gap between coding skills and career opportunities.</p>
               </div>
             </div>
@@ -431,7 +510,7 @@
               <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">FreakyFit – AI-Powered Health & Fitness App</a></h3>
+                <h3 class="heading"><a href="freakyfit.html">FreakyFit – AI-Powered Health & Fitness App</a></h3>
                 <p>Designed an AI-driven fitness app providing personalized workout and meal plans based on user data.</p>
               </div>
             </div>
@@ -446,7 +525,7 @@
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="#">Smart Car Parking and Irrigation Systems using ESP32, Arduino, and Raspberry Pi</a></h3>
+				  <h3 class="heading"><a href="smart-parking.html">Smart Car Parking and Irrigation Systems using ESP32, Arduino, and Raspberry Pi</a></h3>
 				  <p>Developed an IoT-based smart car parking system using ESP32, Arduino, IR sensors, and servo motors for automated gate control and real-time parking slot monitoring via ThingSpeak.</p>
 				</div>
 			  </div>
@@ -466,7 +545,7 @@
 	  </div>
     </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
       <div class="container">
 		<div class="row d-md-flex align-items-center">
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
@@ -526,8 +605,8 @@
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+            <h2 class="mb-4">Get in Touch</h2>
+            <p>Below are the details to reach out to me or send me a message!</p>
           </div>
         </div>
 
@@ -563,14 +642,38 @@
           	<div class="align-self-stretch box p-4 text-center">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-globe"></span>
+          			
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
 	            <p><a href="VishalDeep_final_cv.pdf">Download CV</a></p>
 	          </div>
+	          </div>
           </div>
-        </div>
-      </div>
-    </section>
+
+        <div class="row mt-5 pt-md-5">
+          <div class="col-md-12 ftco-animate">
+            <h2 class="mb-4 text-center">Send Me a Message</h2>
+            <form action="https://formspree.io/f/mvgayrlb" method="POST" class="bg-light p-4 p-md-5 contact-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+				</div>
+              <div class="form-group text-center">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+			</div>
+            </form>
+          </div>
+		   </div>
+   </div>
+ </section>
 
 
  
@@ -604,6 +707,25 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+      body.classList.add(currentTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      let theme = 'light-mode';
+      if (body.classList.contains('dark-mode')) {
+        theme = 'dark-mode';
+      }
+      localStorage.setItem('theme', theme);
+    });
+  </script>
     
   </body>
 </html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog - Vishal Deep Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+.skill-category {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 1em;
+  color: #ffbd39;
+}
+.skill-badge {
+  display: inline-block;
+  background: #222;
+  color: #ffbd39;
+  border-radius: 12px;
+  padding: 4px 12px;
+  margin: 3px 4px 3px 0;
+  font-size: 0.98em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.skill-badge:hover {
+  background: #ffbd39;
+  color: #222;
+}
+
+/* Dark Mode Styles */
+body {
+  --background-color: #fff;
+  --text-color: #333;
+  --heading-color: #111;
+  --secondary-color: #666;
+  --card-background: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+body.dark-mode {
+  --background-color: #1a1a2e;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --secondary-color: #b0b0b0;
+  --card-background: #2a2a4a;
+  --border-color: #444466;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode .navbar {
+    background: #2a2a4a !important;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+    color: var(--heading-color);
+}
+
+body.dark-mode .ftco-section, body.dark-mode .ftco-counter {
+    background: var(--background-color);
+}
+
+body.dark-mode .resume-wrap, body.dark-mode .blog-entry, body.dark-mode .box {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .blog-entry .text, body.dark-mode .resume-wrap .mt-4, body.dark-mode .box p {
+    color: var(--text-color);
+}
+
+body.dark-mode .skill-category {
+    color: #ffbd39;
+}
+
+body.dark-mode a {
+    color: #ffbd39; /* Adjust link color for dark mode */
+}
+
+body.dark-mode a:hover {
+    color: #ffffff; /* Adjust link hover color */
+}
+
+/* Ensure sections have padding in dark mode */
+body.dark-mode .ftco-section {
+    padding: 8em 0;
+}
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vishal Deep</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="index.html#resume-section" class="nav-link"><span>Resume</span></a></li>	      </ul>
+          <div class="ml-auto d-flex align-items-center">
+            <button id="theme-toggle" class="btn btn-light btn-sm">Toggle Theme</button>
+          </div>
+	      </div>
+	    </div>
+	  </nav>
+
+    <section class="ftco-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Blog</h1>
+            <h2 class="mb-4">Latest Articles</h2>
+            <p>Check out my thoughts and insights on technology, coding, and more.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex">
+          <!-- Blog Post Entry Example -->
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="#" class="block-20" style="background-image: url('images/image_1.jpg');"> <!-- Replace with blog post image -->
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">Blog Post Title 1</a></h3> <!-- Replace # with link to individual blog post page -->
+                <p>Brief excerpt of the blog post...</p>
+                <div class="d-flex align-items-center mt-4">
+                  <p class="mb-0"><a href="#" class="btn btn-primary py-3 px-4">Read More</a></p>
+                  <p class="ml-auto mb-0">
+                    <a href="#" class="mr-2">Admin</a>
+                    <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more blog post entries as needed -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+			  <p>All rights reserved.</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+      body.classList.add(currentTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      let theme = 'light-mode';
+      if (body.classList.contains('dark-mode')) {
+        theme = 'dark-mode';
+      }
+      localStorage.setItem('theme', theme);
+    });
+  </script>
+    
+  </body>
+</html> 
